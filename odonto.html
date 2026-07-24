@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Odontologie - CHAN</title>
+  
+  <link rel="stylesheet" href="odonto.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- EN-TÊTE DÉDIÉ AU SERVICE -->
+  <header class="header">
+    <div class="header-container">
+      <div>
+        <h1>Espace Major — Odontologie</h1>
+        <p>Centre Hospitalier Abass Ndao — Gestion du Service</p>
+      </div>
+      <div class="user-info">
+        <span id="user-display">Connecté...</span>
+        <button id="btn-logout" class="btn-logout">Se Déconnecter</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- CARTES KPIS SPECIFIQUES ODONTOLOGIE -->
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <h3>Total Signalements</h3>
+        <p id="kpi-total" class="kpi-value">0</p>
+      </div>
+      <div class="kpi-card success">
+        <h3>Interventions Résolues</h3>
+        <p id="kpi-resolu" class="kpi-value">0</p>
+      </div>
+      <div class="kpi-card warning">
+        <h3>Pannes En Cours</h3>
+        <p id="kpi-encours" class="kpi-value">0</p>
+      </div>
+    </section>
+
+    <!-- GRAPHIQUE DÉDIÉ -->
+    <section class="charts-section">
+      <div class="card">
+        <h2>Répartition des Pannes en Odontologie</h2>
+        <div class="chart-box">
+          <canvas id="chartOdonto"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRE DÉDIÉ AU SERVICE -->
+    <section class="card">
+      <h2>Pannes Signalées (Odontologie)</h2>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Date</th>
+              <th>Équipement / Type</th>
+              <th>Technicien</th>
+              <th>Statut</th>
+            </tr>
+          </thead>
+          <tbody id="table-odonto">
+            <!-- Rempli dynamiquement -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="odonto.js" defer></script>
+</body>
+</html>
