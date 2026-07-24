@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion - Plateforme Numérique CHAN</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <div class="login-container">
+    
+    <!-- CÔTÉ GAUCHE : FORMULAIRES -->
+    <div class="login-left">
+      <div class="brand-header">
+        <h2>Plateforme CHAN</h2>
+        <p>Centre Hospitalier Abass Ndao</p>
+      </div>
+
+      <!-- Formulaire de Connexion -->
+      <form id="login-form" class="auth-form">
+        <h3>Espace de Connexion</h3>
+        <p class="subtitle">Connectez-vous avec vos identifiants cadres</p>
+
+        <div id="error-message" class="alert alert-danger" style="display: none;"></div>
+
+        <div class="form-group">
+          <label for="username">ID Personnel</label>
+          <input type="text" id="username" placeholder="Ex: CAD-ODONTO" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+
+        <div class="form-actions-links">
+          <a href="#" id="link-forgot">Mot de passe oublié ?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Se Connecter</button>
+      </form>
+
+      <!-- Formulaire de Réinitialisation (Masqué par défaut) -->
+      <form id="reset-form" class="auth-form" style="display: none;">
+        <h3>Réinitialisation</h3>
+        <p class="subtitle">Entrez votre ID pour recevoir les instructions</p>
+
+        <div id="reset-success-message" class="alert alert-success" style="display: none;"></div>
+
+        <div class="form-group">
+          <label for="reset-username">ID Personnel</label>
+          <input type="text" id="reset-username" placeholder="Ex: CAD-ODONTO" required>
+        </div>
+
+        <button type="submit" class="btn btn-secondary btn-block">Envoyer la demande</button>
+        
+        <div class="form-actions-links text-center">
+          <a href="#" id="link-back-login">← Retour à la connexion</a>
+        </div>
+      </form>
+
+      <!-- Comptes Démo pour Tester Facilement -->
+      <div class="demo-accounts">
+        <small><strong>Comptes de test pré-configurés :</strong></small>
+        <ul>
+          <li><strong>Admin / Maintenance :</strong> ID: <code>ADMIN</code> | Mdp: <code>admin123</code></li>
+          <li><strong>Major Odontologie :</strong> ID: <code>CAD-ODONTO</code> | Mdp: <code>odonto123</code></li>
+          <li><strong>Major Urgences :</strong> ID: <code>CAD-URG</code> | Mdp: <code>urg123</code></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CÔTÉ DROIT : IMAGE ET BIENVENUE -->
+    <div class="login-right">
+      <div class="overlay"></div>
+      <div class="welcome-content">
+        <h1>Bienvenue sur la plateforme numérique CHAN</h1>
+        <p>Portail centralisé de gestion, d'analyse statistique et de maintenance des équipements hospitaliers du Centre Hospitalier Abass Ndao.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
